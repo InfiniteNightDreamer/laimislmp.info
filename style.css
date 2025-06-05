@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+    margin : 0%;
+}
+#pagetitle {
+    position : relative;
+    background-image:linear-gradient(to bottom, black, transparent), url("Images/Waves.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    height : 450px;
+    width: 100%;
+}
