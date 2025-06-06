@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+    margin : 0%;
+}
+.buttongrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap : 35px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 35px 0px;
+    max-width: 1120px;
+}

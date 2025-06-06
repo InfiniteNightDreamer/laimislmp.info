@@ -1,0 +1,38 @@
+galerybutton {
+    --coverimage : url('Images/ButtonGalery/Waves1.png');
+    transition : .4s ease, --galcol1 1s, background-size 0.5s;
+    display: flex;
+    position: relative;
+    height: 350px;
+    width: 350px;
+
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, var(--galcol1), transparent 45%), var(--coverimage);
+    background-position: center;
+    background-size: 100%;
+
+    align-items:self-end;
+    line-height: 40pt;
+    justify-content: center;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 25pt;
+    color: white;
+    user-select: none;
+}
+galerybutton:hover{
+    transition : .1s ease, --galcol1 .1s;
+    --galcol1 : rgba(255, 255, 255, 0.75);
+    color: black;
+    font-size: 28pt;
+    line-height: 50pt;
+    cursor: pointer;
+    background-size: 110%;
+}
+galerybutton:active {
+    transition: 0s;
+    font-size: 26pt;
+    line-height: 60pt;
+    background-size: 105%;
+}
