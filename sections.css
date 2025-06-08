@@ -9,6 +9,34 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 35px 0px;
-    max-width: 1120px;
+    padding: 45px 45px;
+    max-width: var(--content-width);
+}
+.skillgrid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    grid-gap: 35px;
+    padding: 35px;
+    margin: auto; 
+    max-width: var(--content-width);;
+}
+.firstline {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0;
+}
+.secondline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+#GlueBottom {
+    position: absolute; bottom:0px;
+}
+#GlueTop {
+    position: absolute; top: 0px;
 }

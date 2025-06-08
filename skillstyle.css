@@ -1,0 +1,38 @@
+skillcard {
+  user-select: none;
+  color: var(--title-text);
+  box-shadow: 0px 4px 12px var(--shadow-color);
+  
+  height: 200px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  border-radius: var(--theme_rounding);
+  font-family: InterDisplay;
+  font-weight: 800;
+  font-size: 40pt;
+  flex-basis:  714px;
+  flex-grow: 0;
+  min-width: 30%;
+  background: var(--card-bkg);
+  padding: 8px 8px 8px 16px;
+}
+@media (min-width: 1210px) {
+  skillcard {
+    flex-grow: 0;
+    flex-basis: 515px;
+  }
+  
+}
+skillicon {
+  --skillimage : url('Images/SkillIcons/skill-bl.svg');
+  --iconbkg : #3D3D3D;
+  align-self: right;
+  right: 5px;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: calc(var(--theme_rounding)/1.5);
+  background-image: var(--skillimage), linear-gradient(var(--iconbkg));
+  background-size: cover;
+}

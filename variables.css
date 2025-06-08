@@ -1,0 +1,60 @@
+:root {
+  --main-bkg: white;
+  --main-bkg-g: 255, 255, 255;
+  --second-bkg: #E9E9E9;
+  --card-bkg: #D1D1D1;
+  --section-text: black;
+  --title-text: black;
+  --paragraph-col: black;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-hover: rgba(0, 0, 0, 0.6);
+  
+  --skill-bl-bkg : #3B3B3B;
+}
+
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("Fonts/Inter-Bold.woff2") format("woff2");}
+@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 800; font-display: swap; src: url("Fonts/InterDisplay-ExtraBold.woff2") format("woff2");}
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("Fonts/Inter-Regular.woff2") format("woff2"); }
+@property --galcol1 {
+  syntax: '<color>';
+  initial-value: rgba(0, 0, 0, 0.75);
+  inherits: false;
+}
+
+@property --theme_rounding {
+  syntax: '<length>';
+  initial-value: 8px;
+  inherits: true;
+}
+@property --section_indent {
+  syntax: '<percentage>';
+  initial-value: 20%;
+  inherits: true;
+}
+@property --content-width {
+  syntax: '<length> | <percentage>';
+  initial-value: 1120px;
+  inherits: true;
+}
+/* tamsi tema*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bkg: black;
+    --main-bkg-g: 0, 0, 0;
+    --second-bkg: #2b2b2b;
+    --card-bkg: #404040;
+    --section-text: white;
+    --title-text: #cacaca;
+    --paragraph-col: white;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --shadow-hover: rgba(255, 255, 255, 0.2);
+    
+    --skill-bl-bkg: #1e1e1e;
+  }
+  
+}
+/*sviesi tema
+@media (prefers-color-scheme: light) {
+  --gallery-bkg: white;
+  --skill-bkg: #E9E9E9;
+}

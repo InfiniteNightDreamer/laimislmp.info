@@ -1,42 +1,48 @@
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("Fonts/Inter-Bold.woff2") format("woff2");}
-@font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 800; font-display: swap; src: url("Fonts/InterDisplay-ExtraBold.woff2") format("woff2");}
-@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("Fonts/Inter-Regular.woff2") format("woff2"); }
-@property --galcol1 {
-    syntax: '<color>';
-    initial-value: rgba(0, 0, 0, 0.75);
-    inherits: false;
-}
-property --galcol2 {
-    syntax: '<color>';
-    initial-value: transparent;
-    inherits: false;
-}
 h1.title {
     font-family: InterDisplay;
     font-weight: 800;
     color: white;
     font-size: 70pt;
 }
-sectiontitle.topgradient{
+p {
+    font-family: Inter;
+    font-weight: 400;
+    color: var(--paragraph-col);
+    font-size: 14pt;
+    line-height: 10pt;
+    margin: 5px 0px;
+}
+sectiontitle{
     display: block;
     width: 100%;
-    color: white;
+    color: var(--section-text);
     font-family: Inter;
     font-weight: 700;
     font-size: 35pt;
-    padding:20px 20%;
-    background-image:linear-gradient(to top, black, rgba(0, 0, 0, 0.25));
+    padding: 20px 0px;
+    text-indent: var(--section_indent);
+    
+    
+}
+sectiontitle.topgradient{
+    background-image:linear-gradient(to top, rgba(var(--main-bkg-g), 1), transparent);
+}
+sectiontitle.bottomgradient{
+    background-image:linear-gradient(to bottom, rgba(var(--main-bkg-g), 1), rgba(var(--main-bkg-g), 0.1));
 }
 section.galery{
+    position: relative;
     width: 100%;
-    background: black;
+    background: var(--main-bkg);
 }
 section.skills{
+    position: relative;
     width: 100%;
-    background: rgb(233, 233, 233);
+    background: var(--second-bkg);
 }
 #pagetitle {
     position : relative;
+    display: block;
     background-image:linear-gradient(to bottom, black, transparent), url("Images/Waves.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +50,4 @@ section.skills{
     background-position: center;
     height : 600px;
     width: 100%;
-}
-#GlueBottom {
-    position: absolute; bottom:0px;
 }

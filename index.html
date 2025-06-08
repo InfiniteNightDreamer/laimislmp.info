@@ -3,33 +3,89 @@
   <head>
     <title>Laimis Lmp</title>
     <link rel="stylesheet" href="sections.css">
-    <link rel="stylesheet" href="galerystyles.css">
+    <link rel="stylesheet" href="gallerystyles.css">
     <link rel="stylesheet" href="section_design.css">
+    <link rel="stylesheet" href="skillstyle.css">
+    <link rel="stylesheet" href="variables.css">
   </head>
   <body>
 
-    <div id=pagetitle>
-      <h1 class=title style="text-align: center">Laimis Liumparas</h1>
-      <sectiontitle class=topgradient id=GlueBottom>Mano darbai</sectiontitle>
-    </div>
-
-    <section class=galery>
-       <div class=buttongrid>
-        <galerybutton style="--coverimage: url('Images/ButtonGalery/Packages.png');">Pakuotės dizainas</galerybutton>
-        <galerybutton style="--coverimage: url('Images/ButtonGalery/Illiustrations.png');">Iliustracijos</galerybutton>
-        <galerybutton >Motion graphics</galerybutton>
-        <galerybutton style="--coverimage: url('Images/ButtonGalery/3DGraphics.png');">3D modeliavimas</galerybutton>
-        <galerybutton style="--coverimage: url('Images/ButtonGalery/Branding.svg');">Brandingas</galerybutton>
-        <galerybutton style="--coverimage: url('Images/ButtonGalery/Fonts.svg');">Tipografika</galerybutton>
-      </div>
-    </section>
-    <section class=skills>Skills</section>
-    <section>Contact</section>
-    <section>Credits</section>
-
-
     <main>
+      <div id=pagetitle>
+        <h1 class=title style="text-align: center">Laimis Liumparas</h1>
+        <sectiontitle class=topgradient id=GlueBottom>Mano darbai</sectiontitle>
+      </div>
+
+      <section class=galery>
+        <div class=buttongrid>
+          <gallerybutton style="--coverimage: url('Images/ButtonGalery/Packages.png');">Pakuotės dizainas</gallerybutton>
+          <gallerybutton style="--coverimage: url('Images/ButtonGalery/Illiustrations.png');">Iliustracijos</gallerybutton>
+          <gallerybutton>Motion graphics</gallerybutton>
+          <gallerybutton style="--coverimage: url('Images/ButtonGalery/3DGraphics.png');">3D modeliavimas</gallerybutton>
+          <gallerybutton style="--coverimage: url('Images/ButtonGalery/Branding.svg');">Brandingas</gallerybutton>
+          <gallerybutton style="--coverimage: url('Images/ButtonGalery/Fonts.svg');">Tipografika</gallerybutton>
+        </div>
+      </section>
+      <section class=skills>
+        <sectiontitle class=bottomgradient>Techniniai įgudžiai</sectiontitle>
+        <div class=skillgrid>
+          <skillcard>
+            <div class="firstline">
+              Photoshop<skillicon style="--skillimage : url('Images/SkillIcons/skill-ps.svg'); --iconbkg: #001031"/>
+            </div>
+            <div class="secondline"><p>Su photoshop išmokau kolegijoje lmao</p><p>nors aš jo ir nelabai nodojuosi</p></div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              Illiustrator<skillicon style="--skillimage : url('Images/SkillIcons/skill-ai.svg'); --iconbkg: #310000"/>
+            </div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              InDesign<skillicon style="--skillimage : url('Images/SkillIcons/skill-id.svg'); --iconbkg : #410019"/>
+            </div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              After Effects<skillicon style="--skillimage : url('Images/SkillIcons/skill-ae.svg'); --iconbkg: #000059;"/>
+            </div>
+          </skillcard>
+
+        </div>
+        <div class=skillgrid>
+          <skillcard>
+            <div class="firstline">
+              Krita<skillicon style="--skillimage : url('Images/SkillIcons/skill-kri.svg'); --iconbkg: #627480"/>
+            </div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              Inkscape<skillicon style="--skillimage : url('Images/SkillIcons/skill-ink.svg'); --iconbkg: #979BAA"/>
+            </div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              Blender<skillicon style="--skillimage : url('Images/SkillIcons/skill-bl.svg'); --iconbkg: var(--skill-bl-bkg)"/>
+            </div>
+          </skillcard>
+
+          <skillcard>
+            <div class="firstline">
+              Scribus<skillicon style="--skillimage : url('Images/SkillIcons/skill-scrib.svg'); --iconbkg: #a9b3bc"/>
+            </div>
+          </skillcard>
+        </div>
+      </section>
     </main>
+
+
+
+
     <footer></footer>
   </body>
 </html>
