@@ -2,6 +2,7 @@
   --main-bkg: white;
   --main-bkg-g: 255, 255, 255;
   --second-bkg: #E9E9E9;
+  --second-bkg-in: #8C8A8A;
   --card-bkg: #D1D1D1;
   --section-text: black;
   --title-text: black;
@@ -42,6 +43,7 @@
     --main-bkg: black;
     --main-bkg-g: 0, 0, 0;
     --second-bkg: #2b2b2b;
+    --second-bkg-in: #2b2a2a;
     --card-bkg: #404040;
     --section-text: white;
     --title-text: #cacaca;

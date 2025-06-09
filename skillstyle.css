@@ -3,31 +3,32 @@ skillcard {
   color: var(--title-text);
   box-shadow: 0px 4px 12px var(--shadow-color);
   
-  height: 200px;
   display: flex;
-  margin: auto;
+  margin: 0px auto;
   flex-direction: column;
   border-radius: var(--theme_rounding);
   font-family: InterDisplay;
   font-weight: 800;
   font-size: 40pt;
-  flex-basis:  714px;
+  flex-basis:  525px;
   flex-grow: 0;
   min-width: 30%;
   background: var(--card-bkg);
-  padding: 8px 8px 8px 16px;
+  padding: 8px;
+}
+skillcard p {
+  margin-right: 88px;
 }
 @media (min-width: 1210px) {
   skillcard {
-    flex-grow: 0;
-    flex-basis: 515px;
+    flex-grow: 1;
+    flex-basis: 525px;
   }
   
 }
 skillicon {
   --skillimage : url('Images/SkillIcons/skill-bl.svg');
   --iconbkg : #3D3D3D;
-  align-self: right;
   right: 5px;
   display: block;
   width: 80px;
@@ -35,4 +36,20 @@ skillicon {
   border-radius: calc(var(--theme_rounding)/1.5);
   background-image: var(--skillimage), linear-gradient(var(--iconbkg));
   background-size: cover;
+}
+skpoint {
+  padding: 0px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0px 2px 4px var(--shadow-color) inset;
+  height: 10px;
+  width: 100%;
+  border-radius: calc(var(--theme_rounding)/1.5);
+  background : var(--second-bkg-in);
+}
+progbar {
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, #65994e, #85C966);
 }
