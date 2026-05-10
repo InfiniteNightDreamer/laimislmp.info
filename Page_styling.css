@@ -1,0 +1,288 @@
+@property --gradient_reveal {
+  syntax: '<color>';
+  initial-value: black;
+  inherits: false;
+}
+@property --gradient_base {
+  syntax: '<color>';
+  initial-value: black;
+  inherits: false;
+}
+@font-face {
+  font-family: "InterDisplay";
+  src: url("Fonts/InterDisplay-ExtraBold.woff2") format("woff2"),
+  font-weight: extra-bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "InterDisplay";
+  src: url("Fonts/InterDisplay-Bold.woff2") format("woff2"),
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "IBM-plex-sans";
+  src: url("Fonts/IBMPlexSans-Medium.woff2") format("woff2"),
+  font-weight: medium;
+  font-style: normal;
+}
+/*flood font*/
+@font-face {
+  font-family: "FloodFont";
+  src:  url("Fonts/FloodFont-Dry.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FloodFont";
+  src:  url("Fonts/FloodFont-Light-Flood.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FloodFont";
+  src:  url("Fonts/FloodFont-Flooded.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FloodFont";
+  src:  url("Fonts/FloodFont-OverFlooded.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+square {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background: gray;
+  margin: 0px;
+  padding: 0px;
+  
+}
+body {
+  display: flex;
+  background: #202020;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+}
+main_group {
+  display: flex;
+  flex-grow: 1;
+  max-width: 90vw;
+  gap: 0.5cm;
+  max-height: 90vh;
+  height: 50vh;
+}
+square {
+  display: block;
+  flex: 0 0 auto;
+  height: fit-content;
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: black;
+  padding: 1cm;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.3);
+}
+title {
+  display: block;
+  width: 90%;
+  color: whitesmoke;
+  font-family: InterDisplay;
+  font-weight: extra-bold;
+  font-size-adjust: 1.4;
+}
+section_collection {
+  display: flex;
+  flex-wrap: wrap;
+  direction: row;
+  gap: 0.5cm;
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+}
+.clickable_square {
+  pointer-events: all;
+  display: flex;
+  flex: 1;
+  font-family: inter;
+  box-sizing: border-box;
+  max-height: 100%;
+  padding: 0.5cm;
+  min-height: 3cm;
+  font: inter;
+  color: white;
+  font-family: InterDisplay;
+  font-weight: bold;
+  text-decoration: none;
+  font-size-adjust: 0.7;
+  transition: --gradient_reveal 0.8s ease-out, --gradient_base 0.2s ease-out;
+  
+}
+
+.clickable_square:hover {
+  --gradient_reveal : transparent;
+  --gradient_base : rgba(0, 0, 0, 0.7);
+  transition: all 0.1s ease-in;
+}
+#video_game {
+  background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/CoverGAME.png");
+  background-size: auto, cover;
+  background-position: left;
+}
+#flood_font {
+  background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/FloodFont.svg");
+  background-size: auto, cover;
+  background-position: left;
+}
+#intro_movie {
+  background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/big_short_terminals.png");
+  background-size: auto, cover;
+  background-position: center;
+}
+#package_design {
+  background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/CoffePak.png");
+  background-size: auto, cover;
+  background-position: center;
+}
+#teaser {
+  background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/EtnoDvaras.png");
+  background-size: auto, cover;
+  background-position: right;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: InterDisplay;
+  color: whitesmoke;
+  font-size: 40pt;
+  height: 4cm;
+}
+work-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  margin: 0 auto;
+  gap:0.5cm;
+}
+#video_container {
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  min-width: 20px;
+  height: 70vh;
+  max-width: auto;
+  flex-grow: 0;
+  aspect-ratio: 16/9;
+}
+#video_container_2 {
+  display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
+  min-width: 20px;
+  height: 70vh;
+  max-width: auto;
+  flex-grow: 0;
+}
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: stretch;
+  align-content: start;
+  flex-grow: 1;
+  height: auto;
+  gap: 0.5cm;
+}
+.standart-wrap {
+  flex-wrap: wrap;
+}
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  gap: 0.5cm;
+}
+description {
+  background-color: black;
+  display: flex;
+  color: white;
+  flex: 1;
+  flex-grow: 1;
+  font-family: IBM-plex-sans;
+  font-weight: medium;
+  font-size: 14pt;
+  height: auto;
+  box-sizing: border-box;
+  padding: 1cm;
+  min-width: 300px;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.wide_display {
+  width: 100%;
+}
+.header_image {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 70vh;
+  gap: 0;
+  min-width: 100px;
+  object-fit: cover; 
+}
+
+.Font_test {
+  display: flex;
+  flex: 1;
+  font-family: FloodFont;
+  font-size: 64pt;
+  height: auto;
+  min-height: 50vh;
+  min-width: 400px;
+  resize: none;
+  background: #5A81DB;
+  color: white;
+}
+
+set_weight_btn {
+  user-select: none;
+  display: flex;
+  font-family: IBM-plex-sans;
+  font-size: 18pt;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  color: whitesmoke;
+  background: black;
+  min-width: 6cm;
+  height: auto;
+  min-height: 2.4cm;
+}
+set_weight_btn:hover, descriptionset_weight_btn:focus {
+  color: black;
+  background: ghostwhite;
+  cursor: pointer;
+}
+set_weight_btn:active {
+  background: #5A81DB;
+  color: white;
+}
+#font_preview {
+  background-color: #5A81DB;
+  font-family: FloodFont;
+  font-size: 32pt;
+}
