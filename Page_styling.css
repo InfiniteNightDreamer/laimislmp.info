@@ -210,8 +210,6 @@ work-container {
 }
 #video_container_2 {
   display: flex;
-  flex-shrink: 1;
-  flex-grow: 0;
   min-width: 20px;
   height: 70vh;
 }
@@ -225,22 +223,52 @@ work-container {
   height: auto;
   gap: 0.5cm;
 }
-.horizontal-collection {
-  display: flex;
-  flex-direction: row;
+.horizontal-layout.layout-shrink {
   flex: 0 1;
-  flex-wrap: nowrap;
-  gap: inherit;
-  justify-content: center;
 }
-.standart-wrap {
+.vertical-layout-description {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
   flex-wrap: wrap;
+  gap: 0.5cm;
 }
 .vertical-layout {
   display: flex;
   flex-direction: column;
+  gap: inherit;
+  flex-wrap: wrap;
+  min-width: 5cm;
+  width: 6cm;
+  flex-grow: 1;
   flex-shrink: 1;
-  gap: 0.5cm;
+  
+}
+teaser-button {
+  display: flex;
+  background: black;
+  flex: 1;
+  color: white;
+  padding: 1cm;
+  font-family: IBM-plex-sans;
+  justify-content: center;
+  user-select: none;
+  box-shadow: 0px 0px 0px 0px rgba(193, 176, 143, 1);
+}
+teaser-button:hover {
+  color: black;
+  background: ghostwhite;
+  box-shadow: 0px 0px 50px 0px rgba(193, 176, 143, 1);
+  transition: background 0.1s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+teaser-button:active {
+  color: black;
+  background: #FFD685;
+  box-shadow: 0px 0px 50px 0px rgba(193, 176, 143, 0.5);
+  transition: background 0s linear, color 0s linear, box-shadow 0s linear;
+}
+.standart-wrap {
+  flex-wrap: wrap;
 }
 description {
   background-color: black;
@@ -274,12 +302,13 @@ description {
 
 .Font_test {
   display: flex;
-  flex: 1;
+  flex: 1 1;
   font-family: FloodFont;
   font-size: 64pt;
   height: auto;
   min-height: 50vh;
   min-width: 400px;
+  flex-basis: 25cm;
   resize: none;
   background: #5A81DB;
   color: white;

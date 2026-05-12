@@ -5,19 +5,22 @@
     <title>Teaser</title>
   </head>
   <link rel="stylesheet" href="Page_styling.css">
+  <script src="video_switch.js"></script>
   <body>
     <work-container>
       <header>Etno dvaro teaser<a class="backbutton" href="index.html">Atgal</a></header>
       <div class="horizontal-layout">
-        <description>Teaseris skirtas etno dvaro atydarymui</description>
-        <div class="horizontal-collection">
-          <video id="video_container_2" controls>
-            <source src="VideoWorks/teaser.mp4" type="video/mp4">
-          </video>
-          <video id="video_container_2" controls>
-            <source src="VideoWorks/teaser_var2.mp4" type="video/mp4">
-          </video>
+        <div class="vertical-layout-description">
+          <description>Šio darbo tikslas buvo sukurti teaserį skirta „Etno Dvaro“ restorano atidarymui.<br>
+          Apačioje galite pasirinkti teaser versiją;</description>
+          <div class="horizontal-layout layout-shrink">
+            <teaser-button id="version_1_button" onclick="videoSwitch(1)">1 versija</teaser-button>
+            <teaser-button id="version_2_button" onclick="videoSwitch(0)">2 versija</teaser-button>
+            </div>
         </div>
+          <video id="video_container_2" controls>
+            <source id="container_source" src="VideoWorks/teaser.mp4" type="video/mp4">
+          </video>
       </div>
       <img class="wide_display" src="ScreenShots/Teaser1.png"></img>
       <img class="wide_display" src="ScreenShots/Teaser2.png"></img>
