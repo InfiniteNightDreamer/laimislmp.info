@@ -365,4 +365,15 @@ set_weight_btn:active {
   display: block;
   width: 100%;
   height: 100%;
+  border:none;
+}
+.game_frame {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 70vh;
+  width: 60%;
+  gap: 0;
+  min-width: 900px;
+  object-fit: cover; 
 }
