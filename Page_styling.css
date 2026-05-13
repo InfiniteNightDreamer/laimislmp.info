@@ -79,6 +79,8 @@ main_group {
 }
 square {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex: 0 0 auto;
   height: auto;
   width: 45vw;
@@ -92,6 +94,12 @@ square {
   font-weight: extra-bold;
   font-size-adjust: 1.4;
   box-shadow: 0px 0px 210px 0px rgba(255, 255, 255, 0.3);
+  user-select: none;
+}
+contact-desc {
+  font-size-adjust: 0.8;
+  user-select: all;
+  font-family: IBM-plex-sans;
 }
 section_collection {
   display: flex;
@@ -128,6 +136,7 @@ section_collection {
   --gradient_base : rgba(0, 0, 0, 0.7);
   box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.3);
   transition: --gradient_reveal 0s ease-in, --gradient_base 0.2s ease-in;
+  user-select: none;
 }
 #video_game {
   background-image: linear-gradient(to bottom, var(--gradient_base), 30%, var(--gradient_reveal)), url("ButtonBG/CoverGAME.png");
@@ -156,6 +165,7 @@ section_collection {
 }
 header {
   display: flex;
+  z-index: 2;
   flex-direction: row;
   align-items: center;
   font-family: InterDisplay;
@@ -251,6 +261,7 @@ teaser-button {
   color: white;
   padding: 1cm;
   font-family: IBM-plex-sans;
+  font-size: 18pt;
   justify-content: center;
   user-select: none;
   box-shadow: 0px 0px 0px 0px rgba(193, 176, 143, 1);
@@ -260,6 +271,7 @@ teaser-button:hover {
   background: ghostwhite;
   box-shadow: 0px 0px 50px 0px rgba(193, 176, 143, 1);
   transition: background 0.1s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  cursor: pointer;
 }
 teaser-button:active {
   color: black;
@@ -312,6 +324,14 @@ description {
   resize: none;
   background: #5A81DB;
   color: white;
+  border-style: none;
+  box-shadow: 0px 0px 0px 0px rgba(90, 129, 219, 1);
+  transition: background 0.2s ease-out, box-shadow 0.4s ease-out;
+}
+.Font_test:hover {
+  background: #8197D2;
+  box-shadow: 0px 0px 25px 0px rgba(90, 129, 219, 1);
+  transition: background 0.1s ease-in, box-shadow 0.2s ease-in;
 }
 
 set_weight_btn {
@@ -372,8 +392,41 @@ set_weight_btn:active {
   flex-grow: 1;
   flex-shrink: 1;
   height: 70vh;
-  width: 60%;
+  width: 55%;
   gap: 0;
   min-width: 900px;
   object-fit: cover; 
+}
+.game_fullscreen {
+  display: flex;
+  z-index: 1;
+  background: black;
+  flex: 0 1;
+  color: white;
+  padding: 1cm;
+  font-family: IBM-plex-sans;
+  font-size: 18pt;
+  justify-content: center;
+  user-select: none;
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 0px rgba(132, 159, 178, 1);
+}
+.game_fullscreen:hover {
+  color: black;
+  background: ghostwhite;
+  box-shadow: 0px 0px 50px 0px rgba(132, 159, 178, 1);
+  transition: background 0.1s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.game_fullscreen:active {
+  color: black;
+  background: #849FB2;
+  box-shadow: 0px 0px 50px 0px rgba(132, 159, 178, 0);
+  transition: background 0s linear, color 0s linear, box-shadow 0s linear;  
+  cursor: pointer;
+}
+
+.wide_display.pixel-img {
+  image-rendering: pixelated;
+  image-orientation: -moz-crisp-edges;
+  image-orientation: crisp-edges;
 }
