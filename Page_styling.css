@@ -86,7 +86,7 @@ square {
   width: 45vw;
   max-width: 50vh;
   aspect-ratio: 1/1;
-  background: black;
+  background-image: radial-gradient(circle at top right, #505050 0, black 100%);
   padding: 1cm;
   box-sizing: border-box;
   color: whitesmoke;
@@ -97,6 +97,13 @@ square {
   user-select: none;
 }
 contact-desc {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  min-width: 0;
+  justify-content: end;
   font-size-adjust: 0.8;
   user-select: all;
   font-family: IBM-plex-sans;
